@@ -14,16 +14,14 @@ struct BarGraphGroup: View {
     
     var body: some View {
         
-        ScrollView(.horizontal) {
-            HStack(alignment: .bottom) {
-                ForEach(sales, id: \.self) { sale in
-                    BarView(sale: Sales(year: sale.year, revenue: sale.revenue))
-                }
+        HStack(alignment: .bottom) {
+            ForEach(self.sales, id: \.year) { sale in
+                BarView(sale: sale)
             }
-            
         }
     }
 }
+
 
 struct BarGraphGroup_Previews: PreviewProvider {
     static var previews: some View {

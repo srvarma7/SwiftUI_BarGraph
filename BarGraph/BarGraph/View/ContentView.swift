@@ -12,17 +12,19 @@ struct ContentView: View {
     
     private var sales: [Sales] = Sales.getAll()
     
-    
     var body: some View {
         
         ZStack {
-            Color.init(.orange)
+            Color.init(.white)
                 .opacity(0.7)
                 .edgesIgnoringSafeArea(.all)
             VStack {
+                Spacer(minLength: 15)
                 TitleView()
+                Spacer()
                 BarGraphGroup(sales: sales)
             }
+            
         }
         
     }
