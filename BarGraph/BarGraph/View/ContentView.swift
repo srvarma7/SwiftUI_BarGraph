@@ -13,7 +13,6 @@ struct ContentView: View {
     private var sales: [Sales] = Sales.getAll()
     
     var body: some View {
-        
         ZStack {
             Color.init(.white)
                 .opacity(0.7)
@@ -24,9 +23,7 @@ struct ContentView: View {
                 Spacer()
                 BarGraphGroup(sales: sales)
             }
-            
         }
-        
     }
 }
 
